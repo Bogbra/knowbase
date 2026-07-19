@@ -1,0 +1,15 @@
+{
+  "recall_at_8": {
+    "value": 0.80,
+    "tolerance": 0.10,
+    "description": "Fraction of golden questions whose expected document/chapter appears in top-8 retrieval. Requires OPENAI_API_KEY.",
+    "measured": "2026-07-14, direct OpenAI API (text-embedding-3-small), 5/5 tests passed"
+  },
+  "citation_precision": {
+    "value": 1.0,
+    "tolerance": 0.05,
+    "description": "Fraction of cited source labels that exist in retrieved chunks (no hallucinated references). Deterministic."
+  },
+  "last_updated": "2026-07-14",
+  "note": "Update scores by running: cd backend && uv run python -m eval.runner recall --workspace-id <uuid>"
+}

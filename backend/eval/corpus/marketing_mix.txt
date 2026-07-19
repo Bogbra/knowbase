@@ -1,0 +1,47 @@
+1 Marketing-Mix
+
+Der Marketing-Mix beschreibt die Gesamtheit aller absatzpolitischen Instrumente, die ein Unternehmen zur Erreichung seiner Marketingziele einsetzt. Der Begriff wurde in den 1960er-Jahren von E. Jerome McCarthy geprägt, der die Instrumente in vier Kategorien einteilte: Product (Produktpolitik), Price (Preispolitik), Place (Distributionspolitik) und Promotion (Kommunikationspolitik). Diese vier Dimensionen werden als die vier Ps des Marketing-Mix bezeichnet.
+
+Die Aufgabe des Marketingmanagements besteht darin, diese vier Instrumente aufeinander abzustimmen und zu einem konsistenten Gesamtkonzept zu bündeln. Eine isolierte Betrachtung einzelner Instrumente ist nicht zielführend, da alle vier Ps in Wechselwirkung zueinander stehen. Der Marketing-Mix ist stets auf die definierten Zielgruppen und die strategischen Unternehmensziele auszurichten.
+
+1.1 Produktpolitik
+
+Die Produktpolitik umfasst alle Entscheidungen, die sich auf die Gestaltung des Leistungsangebots eines Unternehmens beziehen. Hierzu zählen Produktentwicklung, Produktvariationen, Produktdifferenzierung sowie Produkteliminierung. Kernproduktentscheidungen betreffen Qualität, Design, Marke, Verpackung und Serviceleistungen.
+
+Im Rahmen der Produktpolitik wird zwischen dem Kernnutzen, dem eigentlichen Produkt und dem erweiterten Produkt unterschieden. Der Kernnutzen bezeichnet den grundlegenden Problemlösungsnutzen, das eigentliche Produkt umfasst physische Merkmale und Qualitätsstufen, und das erweiterte Produkt schließt Zusatzleistungen wie Garantie, Kundendienst und Finanzierungsangebote ein.
+
+Produktlebenszyklus-Entscheidungen gehören ebenfalls zur Produktpolitik. Der Produktlebenszyklus beschreibt die typischen Phasen Einführung, Wachstum, Reife und Rückgang, in denen unterschiedliche Marketingstrategien eingesetzt werden. In der Einführungsphase stehen Bekanntheitssteigerung und Erstkaufanreize im Vordergrund; in der Reifephase dominieren Differenzierung und Kundenbindung.
+
+1.2 Preispolitik
+
+Die Preispolitik legt fest, zu welchem Preis und zu welchen Konditionen ein Produkt angeboten wird. Sie zählt zu den wirkungsstärksten Marketing-Instrumenten, da Preisveränderungen unmittelbar auf Umsatz und Gewinn wirken. Grundsätzlich werden drei Preisstrategien unterschieden: kostenorientierte Preisbildung, wettbewerbsorientierte Preisbildung und nachfrageorientierte Preisbildung.
+
+Bei der kostenorientierten Preisbildung wird der Verkaufspreis auf Basis der Produktionskosten zuzüglich eines Gewinnaufschlags (Kostenaufschlagsmethode) ermittelt. Die wettbewerbsorientierte Preisbildung orientiert sich an den Preisen der Konkurrenten. Die nachfrageorientierte Preisbildung richtet sich nach der Preisbereitschaft der Kunden und nutzt Preis-Absatz-Funktionen zur Optimierung.
+
+Preisdifferenzierung bezeichnet die Praxis, dasselbe Produkt verschiedenen Kundengruppen zu unterschiedlichen Preisen anzubieten. Unterschieden werden räumliche, zeitliche, personenbezogene und mengenmäßige Preisdifferenzierung. Psychologische Preissetzung (z. B. 9,99 EUR statt 10,00 EUR) ist ein weiteres Instrument der Preispolitik.
+
+1.3 Distributionspolitik
+
+Die Distributionspolitik regelt, auf welchem Weg und durch welche Kanäle ein Produkt vom Hersteller zum Endkunden gelangt. Sie umfasst Entscheidungen über Absatzwege, Logistik und physische Distribution. Grundsätzlich wird zwischen direktem Vertrieb (Hersteller direkt an Endkunde) und indirektem Vertrieb (über Zwischenhändler) unterschieden.
+
+Beim Direktvertrieb verkauft der Hersteller seine Produkte unmittelbar an den Endkunden, z. B. über eigene Verkaufsstellen, Direktmarketing oder E-Commerce. Der indirekte Vertrieb nutzt Groß- und Einzelhandel als Absatzmittler. Multi-Channel-Distribution kombiniert mehrere Vertriebskanäle gleichzeitig und gewinnt im digitalen Zeitalter zunehmend an Bedeutung.
+
+Logistische Entscheidungen betreffen Lagerhaltung, Transport, Kommissionierung und Lieferzeitgestaltung. Die Wahl der Distributionsstrategie — exklusive, selektive oder intensive Distribution — richtet sich nach Produkt, Zielgruppe und Markenpositionierung.
+
+1.4 Kommunikationspolitik
+
+Die Kommunikationspolitik umfasst alle Maßnahmen, mit denen ein Unternehmen Informationen über seine Produkte und Leistungen an Zielgruppen vermittelt. Instrumente der Kommunikationspolitik sind Werbung, Verkaufsförderung, Öffentlichkeitsarbeit (PR), persönlicher Verkauf und Direktmarketing sowie im digitalen Bereich Social-Media-Marketing und Content-Marketing.
+
+Werbung ist die bekannteste Form der Kommunikation und zielt darauf ab, Bekanntheit zu schaffen, Einstellungen zu beeinflussen und Kaufverhalten auszulösen. Die Werbewirkung wird häufig anhand des AIDA-Modells beschrieben: Attention (Aufmerksamkeit), Interest (Interesse), Desire (Verlangen), Action (Handlung).
+
+Integrierte Kommunikation bezeichnet die inhaltliche und formale Abstimmung aller Kommunikationsmaßnahmen, um ein konsistentes Markenbild zu erzeugen. Medienplanung, Budgetallokation und Erfolgsmessung (z. B. Reichweite, Konversionsrate, Return on Advertising Spend) sind zentrale Aufgaben des Kommunikationsmanagements.
+
+2 Marketingstrategie
+
+Die Marketingstrategie legt den langfristigen Rahmen für den Einsatz des Marketing-Mix fest. Sie basiert auf einer Situations- und Umfeldanalyse (z. B. SWOT-Analyse) und leitet aus den Unternehmenszielen konkrete Marketingziele ab.
+
+Typische strategische Stoßrichtungen sind Marktdurchdringung, Marktentwicklung, Produktentwicklung und Diversifikation. Diese vier Strategieoptionen werden als Ansoff-Matrix bezeichnet. Positionierungsentscheidungen legen fest, wie das Produkt im Wahrnehmungsraum der Zielkunden verankert werden soll — z. B. als Premiumprodukt, Preisführer oder Nischenanbieter.
+
+Zusammenfassung
+
+Der Marketing-Mix integriert Produktpolitik, Preispolitik, Distributionspolitik und Kommunikationspolitik zu einem kohärenten Instrumentarium. Jedes der vier Ps muss auf die definierten Zielgruppen und die übergeordnete Marketingstrategie abgestimmt sein. Nur ein stimmiger Mix erzeugt nachhaltige Wettbewerbsvorteile und erfüllt Kundenbedürfnisse effektiv.

@@ -1,0 +1,154 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+env:
+  PYTHON_VERSION: "3.12"
+  NODE_VERSION: "22"
+
+jobs:
+  backend-checks:
+    name: Backend — Lint / Type / Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: knowbase_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s --health-timeout 5s --health-retries 10
+      redis:
+        image: redis:7-alpine
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s --health-timeout 3s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --dev
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run mypy --strict app/
+      - run: uv run alembic upgrade head
+        env:
+          DATABASE_URL: postgresql+asyncpg://postgres:postgres@localhost:5432/knowbase_test
+      - name: Warn when recall tests skipped on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          if [ -z "${OPENAI_API_KEY:-}" ]; then
+            echo "::warning title=Eval Skip::Recall integration tests skipped on main — add OPENAI_API_KEY secret to enable nightly eval"
+          fi
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - run: uv run pytest tests/unit/ --cov=app --cov-report=term-missing
+        env:
+          DATABASE_URL: postgresql+asyncpg://postgres:postgres@localhost:5432/knowbase_test
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: ci-secret-key-at-least-32-chars-xx
+
+  worker-checks:
+    name: Worker — Lint / Type / Test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: worker
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --dev
+      - run: uv run ruff check .
+      - run: uv run mypy --strict app/
+      - run: uv run pytest
+
+  frontend-checks:
+    name: Frontend — Type / Lint / Build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm install
+      - run: npm run type-check
+      - run: npm run lint
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:8000
+          NEXTAUTH_URL: http://localhost:3000
+          NEXTAUTH_SECRET: ci-nextauth-secret-32chars-minimum
+
+  dependency-audit:
+    name: Dependency vulnerability audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+
+      # `uv run --with pip-audit pip-audit --local` audits the project's own
+      # synced .venv directly — this avoids both a pyproject.toml/uv.lock
+      # change (pip-audit stays out of the dependency tree) and pip-audit's
+      # requirements-file mode, which builds a throwaway venv per run and is
+      # slow and fragile compared to auditing what's already installed.
+      - name: Audit backend dependencies (pip-audit)
+        working-directory: backend
+        run: |
+          uv sync --dev
+          uv run --with pip-audit pip-audit --local
+
+      - name: Audit worker dependencies (pip-audit)
+        working-directory: worker
+        run: |
+          uv sync --dev
+          uv run --with pip-audit pip-audit --local
+
+      - name: Audit mcp-server dependencies (pip-audit)
+        working-directory: mcp-server
+        run: |
+          uv sync --dev
+          uv run --with pip-audit pip-audit --local
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Audit frontend dependencies (npm audit)
+        working-directory: frontend
+        run: npm audit --audit-level=high
+
+  image-scan:
+    name: Trivy scan — backend image
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build backend image
+        run: docker build -t knowbase-backend:ci ./backend
+
+      # Scans the same Dockerfile the deploy workflow pushes, so this closes
+      # the loop between "build & push" (deploy.yml) and "verified clean."
+      - name: Scan image for HIGH/CRITICAL vulnerabilities
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: knowbase-backend:ci
+          severity: HIGH,CRITICAL
+          exit-code: "1"
+          ignore-unfixed: true

@@ -1,0 +1,102 @@
+{
+  "title": "Knowbase",
+  "uid": "knowbase-main",
+  "schemaVersion": 38,
+  "version": 1,
+  "refresh": "30s",
+  "time": { "from": "now-1h", "to": "now" },
+  "panels": [
+    {
+      "id": 1,
+      "title": "HTTP Requests / min",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "rate(http_requests_total[1m]) * 60",
+          "legendFormat": "{{method}} {{path}} {{status}}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "P95 Request Latency (ms)",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p95 {{path}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Agent Runs",
+      "type": "stat",
+      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 4 },
+      "targets": [
+        {
+          "expr": "sum(agent_runs_total)",
+          "legendFormat": "Total"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Agent Runs / min",
+      "type": "timeseries",
+      "gridPos": { "x": 6, "y": 8, "w": 10, "h": 4 },
+      "targets": [
+        {
+          "expr": "rate(agent_runs_total[1m]) * 60",
+          "legendFormat": "{{status}}"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Document Ingests",
+      "type": "stat",
+      "gridPos": { "x": 16, "y": 8, "w": 4, "h": 4 },
+      "targets": [
+        {
+          "expr": "sum(document_ingests_total)",
+          "legendFormat": "Total"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Error Rate (5xx)",
+      "type": "timeseries",
+      "gridPos": { "x": 0, "y": 12, "w": 12, "h": 6 },
+      "targets": [
+        {
+          "expr": "rate(http_requests_total{status=~\"5..\"}[5m])",
+          "legendFormat": "5xx errors"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "P50 / P90 / P99 Latency",
+      "type": "timeseries",
+      "gridPos": { "x": 12, "y": 12, "w": 12, "h": 6 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, rate(http_request_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p50"
+        },
+        {
+          "expr": "histogram_quantile(0.90, rate(http_request_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p90"
+        },
+        {
+          "expr": "histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p99"
+        }
+      ]
+    }
+  ]
+}

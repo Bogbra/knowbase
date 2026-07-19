@@ -1,0 +1,71 @@
+name: Nightly Eval — Retrieval Recall
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # 02:00 UTC daily
+  workflow_dispatch: # manual trigger for one-shot runs
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  eval:
+    name: Retrieval Recall@8 against golden dataset
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      postgres:
+        image: pgvector/pgvector:pg16
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: knowbase_eval
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s --health-timeout 5s --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+      - run: uv sync --dev
+      - run: uv run alembic upgrade head
+        env:
+          DATABASE_URL: postgresql+asyncpg://postgres:postgres@localhost:5432/knowbase_eval
+
+      # Run integration tests — recall tests no longer skip because OPENAI_API_KEY is set.
+      # --fail-on-no-tests prevents silently empty runs if test paths move.
+      # The pass/fail gate itself lives in the test, not in this workflow:
+      # test_retrieval_recall.py::test_recall_at_8_meets_baseline asserts
+      # recall >= baseline - tolerance and raises on failure, which fails this
+      # step's exit code below and turns the scheduled run red — GitHub emails
+      # watchers on scheduled-workflow failure by default, so a regression
+      # can't silently pass as "computed but not checked."
+      - name: Run retrieval recall integration tests
+        run: |
+          set +e
+          uv run pytest tests/integration/ -v
+          ec=$?
+          set -e
+          if [ $ec -eq 5 ]; then
+            echo "::error::No integration tests collected — test path may have moved"
+            exit 1
+          fi
+          exit $ec
+        env:
+          DATABASE_URL: postgresql+asyncpg://postgres:postgres@localhost:5432/knowbase_eval
+          REDIS_URL: redis://localhost:6379/0
+          SECRET_KEY: nightly-eval-secret-key-32chars-xx
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+      # Fail explicitly if secret missing — avoids silent skips masquerading as green.
+      - name: Require OPENAI_API_KEY was set
+        if: always()
+        run: |
+          if [ -z "${OPENAI_API_KEY:-}" ]; then
+            echo "::error::OPENAI_API_KEY secret is not configured — recall tests skipped silently. Add the secret to this repo."
+            exit 1
+          fi
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

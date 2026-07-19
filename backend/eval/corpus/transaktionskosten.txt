@@ -1,0 +1,35 @@
+1 Transaktionskostentheorie
+
+Die Transaktionskostentheorie ist ein zentrales Konzept der Neuen Institutionenökonomik. Sie geht auf die Arbeiten von Ronald Coase (1937) und Oliver Williamson (1975, 1985) zurück. Kern der Theorie ist die Frage, unter welchen Bedingungen ökonomische Aktivitäten über den Markt koordiniert werden oder stattdessen innerhalb einer Unternehmenshierarchie ablaufen.
+
+Eine Transaktion bezeichnet die Übertragung von Verfügungsrechten an Gütern oder Leistungen. Mit jeder Transaktion entstehen Kosten, die über den reinen Produktionspreis hinausgehen: die Transaktionskosten. Die Theorie behauptet, dass institutionelle Arrangements — Märkte, Hierarchien, hybride Formen — danach gewählt werden, welche Koordinationsform die Transaktionskosten minimiert.
+
+1.1 Transaktionskosten
+
+Transaktionskosten entstehen vor und nach Vertragsabschluss. Ex-ante-Kosten umfassen Such- und Informationskosten (Identifikation geeigneter Transaktionspartner), Verhandlungskosten (Aushandlung der Vertragsbedingungen) und Vertragsformulierungskosten. Ex-post-Kosten entstehen durch Überwachung der Vertragserfüllung (Monitoring), Anpassungen bei Vertragsänderungen (Adaptionskosten) und eventuelle Streitbeilegung (Sanktionskosten).
+
+Die Höhe der Transaktionskosten wird durch drei Hauptfaktoren bestimmt: Spezifität der eingesetzten Ressourcen, Unsicherheit der Transaktion und Häufigkeit der Transaktion. Hohe Spezifität und hohe Unsicherheit erhöhen die Transaktionskosten und begünstigen die Integration in Hierarchien.
+
+1.2 Spezifität
+
+Spezifität (engl. asset specificity) bezeichnet das Ausmaß, in dem eine Investition speziell auf eine bestimmte Transaktion zugeschnitten ist und nur begrenzt anderweitig eingesetzt werden kann. Williamson unterscheidet vier Arten von Spezifität: Standortspezifität (z. B. ortsgebundene Produktionsanlagen), physische Spezifität (maßgeschneiderte Maschinen), Humankapitalspezifität (transaktionsspezifisches Wissen der Mitarbeiter) und zeitliche Spezifität (zeitkritische Leistungen).
+
+Mit steigender Spezifität nimmt die Abhängigkeit zwischen den Transaktionspartnern zu. Hohe Spezifität erzeugt bilaterale Abhängigkeit (bilateral dependency) und erhöht das Risiko opportunistischen Verhaltens nach Vertragsabschluss. Dieses Phänomen wird als Hold-up-Problem bezeichnet. Um dieses Risiko zu begrenzen, tendieren Unternehmen bei hoher Spezifität zur vertikalen Integration.
+
+1.3 Opportunismus und begrenzte Rationalität
+
+Die Transaktionskostentheorie beruht auf zwei Verhaltensannahmen: begrenzte Rationalität (bounded rationality) und Opportunismus. Begrenzte Rationalität nach Herbert Simon (1957) besagt, dass Wirtschaftssubjekte zwar intendiert rational handeln, aber aufgrund kognitiver Beschränkungen und unvollständiger Information keine vollständig rationalen Entscheidungen treffen können.
+
+Opportunismus bezeichnet die Verfolgung des Eigeninteresses unter Einsatz von List und Täuschung. Williamson unterscheidet ex-ante-Opportunismus (adverse Selektion: strategisch verzerrte Informationsweitergabe vor Vertragsabschluss) von ex-post-Opportunismus (moralisches Risiko: Vertragsuntreue nach Vertragsabschluss). Beide Formen erhöhen die Transaktionskosten durch notwendige Sicherungsmaßnahmen.
+
+2 Institutionelle Arrangements
+
+Auf Basis der Transaktionskostentheorie lassen sich drei grundlegende institutionelle Arrangements unterscheiden: Markt, Hierarchie und Hybridformen.
+
+Der Markt koordiniert Transaktionen über den Preismechanismus. Er ist effizient bei standardisierten, häufig gehandelten Gütern mit geringer Spezifität. Die Hierarchie (Unternehmensorganisation) koordiniert durch Weisungsbefugnis und vermeidet Marktversagen bei hochspezifischen Transaktionen. Hybridformen wie Franchising, Joint Ventures oder langfristige Verträge kombinieren Elemente beider Koordinationsformen.
+
+Die Make-or-buy-Entscheidung ist eine direkte Anwendung der Transaktionskostentheorie: Ein Unternehmen produziert intern (make), wenn die Transaktionskosten des externen Bezugs (buy) die internen Koordinationskosten übersteigen. Bei geringer Spezifität empfiehlt sich der Marktbezug (buy); bei hoher Spezifität ist die eigene Produktion (make) vorzuziehen.
+
+Zusammenfassung
+
+Die Transaktionskostentheorie erklärt die Wahl von Koordinationsformen durch Minimierung der Transaktionskosten. Spezifität, Unsicherheit und Häufigkeit sind die zentralen Kostentreiber. Opportunismus und begrenzte Rationalität sind die verhaltenswissenschaftlichen Grundannahmen. Die Theorie liefert ein fundiertes Erklärungsmodell für vertikale Integration, Make-or-buy-Entscheidungen und die Gestaltung von Vertragsbeziehungen.

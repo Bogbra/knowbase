@@ -1,0 +1,41 @@
+1 Grundlagen der Organisationsstruktur
+
+Die Organisationsstruktur eines Unternehmens legt fest, wie Aufgaben, Kompetenzen und Verantwortlichkeiten auf Stellen und Abteilungen verteilt werden. Die Aufbauorganisation bestimmt, welche Einheiten existieren und wie diese hierarchisch zueinander stehen. Die Ablauforganisation regelt hingegen, wie Arbeitsprozesse zeitlich und räumlich koordiniert werden.
+
+Wesentliche Gestaltungsprinzipien der Aufbauorganisation sind: Spezialisierung (Arbeitsteilung nach Funktionen oder Objekten), Koordination (Abstimmung der Einheiten), Delegation (Übertragung von Entscheidungskompetenzen) und Leitungsspanne (Anzahl der einer Führungskraft direkt unterstellten Mitarbeiter).
+
+Die Wahl der Organisationsstruktur ist eine strategische Entscheidung, die von Unternehmensumfeld, -größe, -strategie und Wettbewerbssituation abhängt. Eine ungeeignete Struktur erhöht Koordinationskosten, verlangsamt Entscheidungen und mindert die Anpassungsfähigkeit.
+
+1.1 Funktionale Organisation
+
+Die funktionale Organisation gliedert das Unternehmen nach gleichartigen Verrichtungen (Funktionen). Typische Funktionsbereiche sind Beschaffung, Produktion, Vertrieb, Finanzen, Personal und Forschung & Entwicklung. Jede Funktion wird von einer Fachabteilung unter Leitung eines Funktionsverantwortlichen geführt.
+
+Vorteile der funktionalen Organisation sind hohe Spezialisierungsgrade in jedem Funktionsbereich, eindeutige Kompetenzabgrenzungen und Größenvorteile durch Bündelung gleichartiger Tätigkeiten. Nachteile bestehen in ausgeprägtem Abteilungsdenken (Silodenken), langen Entscheidungswegen bei bereichsübergreifenden Aufgaben und mangelnder Kundenorientierung.
+
+Die funktionale Organisation ist besonders geeignet für Unternehmen mit einem homogenen Produktprogramm, stabiler Unternehmensumwelt und überschaubarer Unternehmensgröße. Bei zunehmender Produkt- oder Marktvielfalt stößt sie an ihre Grenzen.
+
+1.2 Divisionale Organisation
+
+Die divisionale Organisation (auch Spartenorganisation oder Geschäftsbereichsorganisation) gliedert das Unternehmen in relativ autonome Geschäftsbereiche (Divisionen oder Sparten), die jeweils Produkte, Märkte oder Regionen eigenständig verantworten. Jede Division verfügt über die wesentlichen Funktionsbereiche und wird als Profit Center geführt.
+
+Vorteile der divisionalen Organisation sind ausgeprägte Markt- und Kundenorientierung, klare Ergebnisverantwortung der Divisionen, Entlastung der Unternehmensleitung von operativen Aufgaben und höhere Reaktionsfähigkeit auf Marktveränderungen. Nachteile umfassen Doppelungen von Ressourcen und Kompetenzen in verschiedenen Divisionen sowie mögliche Suboptimierung auf Divisionsebene zu Lasten des Gesamtunternehmens.
+
+Die divisionale Organisation empfiehlt sich für diversifizierte Großunternehmen mit heterogenem Produktportfolio, die auf verschiedenen Märkten aktiv sind.
+
+1.3 Matrixorganisation
+
+Die Matrixorganisation überlagert zwei Gliederungsprinzipien gleichzeitig: in der Regel eine funktionale Dimension und eine objektorientierte Dimension (Produkte, Projekte, Regionen). Jeder Mitarbeiter hat damit zwei Vorgesetzte — einen Funktionsvorgesetzten und einen Objekt- oder Projektverantwortlichen. Dieses Merkmal wird als Zwei-Linien-Prinzip bezeichnet.
+
+Vorteile der Matrixorganisation sind hohe Flexibilität, effiziente Ressourcennutzung durch geteilte Spezialisten, ausgeprägte Koordination zwischen Funktionen und Objekten sowie schnelle Reaktion auf komplexe Anforderungen. Nachteile entstehen durch Konflikte zwischen den zwei Vorgesetzten, erhöhten Kommunikations- und Abstimmungsaufwand sowie Rollenkonflikte und unklare Verantwortlichkeiten bei Mitarbeitern.
+
+Die Matrixorganisation ist besonders geeignet für projektintensive Branchen (z. B. Ingenieurwesen, IT, Unternehmensberatung) und Unternehmen, die gleichzeitig funktionale Spezialisierung und Produkt- bzw. Kundenorientierung benötigen.
+
+2 Organisationsformen im Vergleich
+
+Ein direkter Vergleich der drei Grundformen zeigt: Die funktionale Organisation bietet die höchste Spezialisierung bei geringster struktureller Komplexität, eignet sich jedoch nur für homogene Produktprogramme. Die divisionale Organisation bietet die beste Marktorientierung und Ergebnisverantwortung, erfordert aber Ressourcendoppelungen. Die Matrixorganisation vereint Stärken beider Grundformen, ist jedoch die komplexeste Koordinationsform und anfällig für Kompetenzkonflikte.
+
+In der Praxis existieren häufig Mischformen: Ein Unternehmen kann auf Konzernebene divisional strukturiert sein, während einzelne Divisionen intern funktional organisiert sind. Projektorganisationen als temporäre Strukturen können in alle drei Grundformen integriert werden.
+
+Zusammenfassung
+
+Die Wahl der Organisationsform hängt von Unternehmensstrategie, -größe und Umfeldkomplexität ab. Die funktionale Organisation eignet sich für homogene, stabile Umfelder; die divisionale für diversifizierte, marktorientierte Unternehmen; die Matrixorganisation für komplexe, projektintensive Anforderungen. In der Praxis dominieren Mischformen, die Elemente mehrerer Grundformen kombinieren.
